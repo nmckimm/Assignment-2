@@ -1,9 +1,6 @@
 from flask import render_template
 from app import app
-from flask_debugtoolbar import DebugToolbarExtension
-app.debug = True
-app.config['SECRET_KEY'] = '123'
-toolbar = DebugToolbarExtension(app)
+
 import importlib.util
 spec = importlib.util.spec_from_file_location("main", "/home/neil/git/COM30670/Assignment2/systeminfo/systeminfo/main.py")
 foo = importlib.util.module_from_spec(spec)
